@@ -1,12 +1,15 @@
 
-all: install_base_packages install_python install_r install_gamehub
+all: install_cli_tools install_user_applications install_python install_r install_gamehub
 
 clean:
 	rm -rf rstudio.deb
 
-install_base_packages:
-	sudo apt-get update
-	sudo apt-get install -y ssh screen w3m wget curl gawk python3-csvkit make aria2 uget npm sed gcc git neovim p7zip magic-wormhole vlc libreoffice p7zip-full fzf ripgrep virtualbox flashplugin-installer freerdp2-x11 remmina telegram-desktop sshfs hexedit
+install_user_applications:
+	sudo apt-get install -y uget vlc gnumeric libreoffice virtualbox flashplugin-installer freerdp2-x11 remmina telegram-desktop
+
+install_cli_tools:
+	sudo apt-get install -y ssh screen w3m wget curl gawk python3-csvkit make aria2 npm sed gcc git neovim magic-wormhole p7zip-full fzf ripgrep sshfs hexedit
+	sudo npm install -g localtunnel
 	curl -L https://is.gd/friendly_vim | python3
 
 install_python: install_vscodium install_pycharm
