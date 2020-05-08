@@ -22,6 +22,10 @@ install_vscodium:
 	sudo apt-get update
 	sudo apt-get install -y codium
 
+change_grub_timeout:
+	sudo sed -i 's/GRUB_TIMEOUT=10/GRUB_TIMEOUT=3/' /etc/default/grub
+	sudo update-grub
+
 install_gamehub:
 	sudo apt-get install --no-install-recommends -y software-properties-common
 	sudo add-apt-repository ppa:tkashkin/gamehub
