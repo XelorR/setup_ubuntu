@@ -9,9 +9,12 @@ install_base_packages:
 	sudo apt-get install -y ssh screen w3m wget curl gawk python3-csvkit make aria2 uget npm sed gcc git neovim p7zip magic-wormhole vlc libreoffice p7zip-full fzf ripgrep virtualbox flashplugin-installer freerdp2-x11 remmina telegram-desktop sshfs hexedit
 	curl -L https://is.gd/friendly_vim | python3
 
-install_python: install_vscodium
+install_python: install_vscodium install_pycharm
 	sudo apt-get install -y python3-dev python3-pip python3-rope python3-venv python3-yaml python3-yapf pylint
 	python3 -m pip install -U --user black virtualenvwrapper
+
+install_pycharm:
+	sudo snap install pycharm-community --classic
 
 install_vscodium:
 	wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -
