@@ -24,6 +24,12 @@ install_vscodium:
 	echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list
 	sudo apt-get update
 	sudo apt-get install -y codium
+	codium --install-extension ms-python.python
+	codium --install-extension ikuyadeu.r
+	codium --install-extension eamodio.gitlens
+	codium --install-extension mhutchie.git-graph
+	codium --install-extension michelemelluso.gitignore
+	codium --install-extension formulahendry.code-runner
 
 change_grub_timeout:
 	sudo sed -i 's/GRUB_TIMEOUT=10/GRUB_TIMEOUT=3/' /etc/default/grub
