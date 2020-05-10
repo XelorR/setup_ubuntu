@@ -19,7 +19,7 @@ install_python: install_vscodium install_pycharm
 install_pycharm:
 	sudo snap install pycharm-community --classic
 
-install_vscodium:
+install_vscodium: install_cli_tools
 	wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -
 	echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list
 	sudo apt-get update
@@ -31,7 +31,7 @@ install_vscodium:
 	codium --install-extension michelemelluso.gitignore
 	codium --install-extension formulahendry.code-runner
 
-install_teamviewer:
+install_teamviewer: install_cli_tools
 	wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 	sudo apt-get install -y ./teamviewer_amd64.deb
 
