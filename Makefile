@@ -31,6 +31,10 @@ install_vscodium:
 	codium --install-extension michelemelluso.gitignore
 	codium --install-extension formulahendry.code-runner
 
+install_teamviewer:
+	wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+	sudo apt-get install -y ./teamviewer_amd64.deb
+
 change_grub_timeout:
 	sudo sed -i 's/GRUB_TIMEOUT=10/GRUB_TIMEOUT=3/' /etc/default/grub
 	sudo update-grub
