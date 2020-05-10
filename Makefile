@@ -1,10 +1,10 @@
 
-all: install_cli_tools install_user_applications install_r install_python install_gamehub install_teamviewer
+all: install_user_applications install_r install_python install_gamehub
 
 clean:
 	rm -rf rstudio.deb teamviewer_amd64.deb
 
-install_user_applications:
+install_user_applications: install_teamviewer
 	sudo apt-get install -y uget vlc gnumeric libreoffice virtualbox flashplugin-installer freerdp2-x11 remmina telegram-desktop
 
 install_cli_tools:
