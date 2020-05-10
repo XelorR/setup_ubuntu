@@ -1,5 +1,5 @@
 
-all: install_cli_tools install_user_applications install_python install_r install_gamehub
+all: install_cli_tools install_user_applications install_r install_python install_gamehub
 
 clean:
 	rm -rf rstudio.deb
