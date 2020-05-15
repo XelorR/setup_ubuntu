@@ -30,6 +30,10 @@ install_vscodium: install_cli_tools
 	codium --install-extension mhutchie.git-graph
 	codium --install-extension michelemelluso.gitignore
 	codium --install-extension formulahendry.code-runner
+	codium --install-extension kiteco.kite
+
+install_kite:
+	bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
 
 install_teamviewer: install_cli_tools
 	wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
