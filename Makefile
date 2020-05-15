@@ -1,5 +1,5 @@
 
-all: install_user_applications install_r install_python install_gamehub
+all: install_user_applications install_r install_python install_gamehub install_kite
 
 clean:
 	rm -rf rstudio.deb teamviewer_amd64.deb
