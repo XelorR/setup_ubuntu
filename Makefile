@@ -8,13 +8,13 @@ install_user_applications: install_teamviewer
 	sudo apt-get install -y uget vlc gnumeric libreoffice virtualbox flashplugin-installer freerdp2-x11 remmina telegram-desktop
 
 install_cli_tools:
-	sudo apt-get install -y ssh screen w3m wget curl youtube-dl gawk csvkit make aria2 npm sed gcc git neovim magic-wormhole p7zip-full fzf ripgrep sshfs hexedit
+	sudo apt-get install -y ssh screen w3m wget curl youtube-dl gawk csvkit make aria2 npm sed gcc git neovim magic-wormhole p7zip-full fzf ripgrep sshfs hexedit scrot
 	sudo npm install -g localtunnel
 	curl -L https://is.gd/friendly_vim | python3
 
 install_python: install_vscodium install_pycharm
-	sudo apt-get install -y python3-dev python3-pip python3-rope python3-venv python3-yaml python3-yapf pylint
-	python3 -m pip install -U --user black virtualenvwrapper youtube-search
+	sudo apt-get install -y python3-dev python3-pip python3-rope python3-venv python3-yaml python3-yapf pylint python3-notebook python3-tables python3-h5py python3-pandas python3-lxml python3-openpyxl python3-xlrd
+	python3 -m pip install -U --user black virtualenvwrapper youtube-search dask[dataframe] pyarrow radian
 
 install_pycharm:
 	sudo snap install pycharm-community --classic
