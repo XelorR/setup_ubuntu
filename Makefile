@@ -30,6 +30,7 @@ install_vscodium: install_cli_tools
 	codium --install-extension mhutchie.git-graph
 	codium --install-extension michelemelluso.gitignore
 	codium --install-extension formulahendry.code-runner
+	codium --install-extension grapecity.gc-excelviewer
 	codium --install-extension kiteco.kite
 
 install_kite:
