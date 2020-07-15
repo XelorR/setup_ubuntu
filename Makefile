@@ -1,5 +1,5 @@
 
-all: install_user_applications install_r install_python install_gamehub install_kite
+all: install_user_applications install_r install_python install_gamehub
 
 clean:
 	rm -rf rstudio.deb teamviewer_amd64.deb
@@ -31,7 +31,7 @@ install_vscodium: install_cli_tools
 	codium --install-extension michelemelluso.gitignore
 	codium --install-extension formulahendry.code-runner
 	codium --install-extension grapecity.gc-excelviewer
-	codium --install-extension kiteco.kite
+	codium --install-extension ms-python.vscode-pylance
 
 install_kite:
 	bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
