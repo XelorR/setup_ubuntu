@@ -32,6 +32,7 @@ install_vscodium: install_cli_tools
 	codium --install-extension formulahendry.code-runner
 	codium --install-extension grapecity.gc-excelviewer
 	codium --install-extension ms-python.vscode-pylance
+	codium --install-extension ms-python.gather
 
 install_kite:
 	bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
